@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>WideChat Auto Logout</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="theme.css">
+    <script src="theme.js" defer></script>
+</head>
+<body>
+<div class="theme-toggle">
+    <label class="switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider round"></span>
+    </label>
+    <span id="themeLabel" class="theme-icon">☀️</span>
+</div>
+<div class="container">
+    <h3>WideChat Agent Monitor</h3>
+
+    <div class="card" id="domainInputSection">
+        <label for="domain">Domínio WideChat:</label>
+        <input type="text" id="domain" placeholder="ex: seudominio.widechat.com.br" />
+    </div>
+
+    <div class="card" id="loginForm">
+        <input type="email" id="email" placeholder="E-mail" />
+
+        <div class="password-wrapper">
+            <input type="password" id="password" placeholder="Senha" />
+            <span id="togglePassword" class="toggle-password">👁️</span>
+        </div>
+
+        <button id="loginBtn">Login</button>
+        <div id="loadingLogin" class="loading hidden">Fazendo login...</div>
+        <div id="statusMessage" class="status hidden"></div>
+    </div>
+    <div class="card" id="logoutSection">
+        <p>Logado como: <strong id="userEmail"></strong></p>
+        <button id="logoutBtn">Logout Manual</button>
+        <button id="clearBtn" class="secondary">Limpar Credenciais</button>
+        <div id="loadingLogout" class="loading hidden">Deslogando...</div>
+        <div id="statusMessageLogout" class="status hidden"></div>
+    </div>
+</div>
+
+<script src="popup.js" type="module" defer></script>
+</body>
+</html>
